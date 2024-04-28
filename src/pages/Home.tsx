@@ -1,4 +1,5 @@
 import SectionOne from "@/components/home/SectionOne";
+import SectionThree from "@/components/home/SectionThree";
 import SectionTwo from "@/components/home/SectionTwo";
 
 const Home = () => {
@@ -9,6 +10,9 @@ const Home = () => {
 
             {/* section two */}
             <SectionTwo />
+
+            {/* section three */}
+            <SectionThree />
         </>
     )
 }

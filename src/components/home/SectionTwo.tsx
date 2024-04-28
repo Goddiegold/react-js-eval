@@ -3,8 +3,6 @@ import {
     Image,
     Paper,
     ActionIcon,
-    ScrollArea,
-    Button
 } from "@mantine/core";
 import { jobsList } from "@/shared/helpers";
 import { MedalMilitary, SquaresFour, User } from "@phosphor-icons/react";
