@@ -12,13 +12,13 @@ const SectionThree = () => {
             direction={"column"}
             // mt={100}
             className="bg-color-2  -skew-y-[3deg] overflow:hidden"
-            mih={500} p={20}>
+            mih={700} p={20}>
             <Flex direction={'column'}>
                 <Flex justify={'flex-end'} mt={-20}>
                     <Image src={doubleQuotation} width={100} />
                 </Flex>
-                <Flex className="skew-y-[3deg] flex-row justify-between w-full" mt={100} px={40}>
-                    <Flex direction={'column'} className="w-[50%]">
+                <Flex className="skew-y-[3deg] flex-row justify-between w-full" mt={50} px={40}>
+                    <Flex direction={'column'} className="w-[50%]" mt={0}>
                         <Flex className="w-[50%] flex-col overflow-hidden">
                             <Text className="block"
                                 fw={600}
@@ -48,7 +48,9 @@ const SectionThree = () => {
                         </Flex>
                     </Flex>
 
-                    <Flex className="w-[50%]" direction={'column'} mt={30}>
+                    <Flex className="w-[50%]"
+                    justify={'flex-end'}
+                        direction={'column'} mt={0}>
                         <Flex>
                             <div className="flex w-[70px] h-[70px]
                          rounded-[25px] bg-color-8 justify-center items-center px-[10px]">

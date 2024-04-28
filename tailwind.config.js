@@ -16,6 +16,10 @@ export default {
         "color-8": "#A285D0",
         "color-9": "#F6F6F6",
         "color-10": "#C6C4C4",
+        "color-11": "#808080",
+        "color-12": "#1E1515",
+        "color-13": "#ECECEC",
+        "color-14": "#8BA4FD",
       },
       fontFamily: {
         primary: "Roboto",

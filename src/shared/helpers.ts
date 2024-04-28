@@ -23,6 +23,7 @@ export const jobs = [
     "Python Developer",
     "Full Stack Developer",
 ]
+
 export const jobsList = [
     {
         image: shopifyImg,
@@ -66,4 +67,11 @@ export const jobsList = [
     }
 ]
 
-// Your one-stop marketplace for finding the talent your business needs.
+export const recuirementProcess = [
+    "Resume Screening",
+    "Video Interview",
+    "Technical Evaluation",
+    "Application Review",
+    "Lets get to work"
+
+]
