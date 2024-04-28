@@ -8,6 +8,9 @@ import photoshopImg from "@/assets/jobs/photoshop.png";
 import adobeImg from "@/assets/jobs/adobe_illustrator.png";
 import unrealImg from "@/assets/jobs/unreal.png";
 import cinema4dImg from "@/assets/jobs/cinema_4d.png";
+import talents1 from "@/assets/talents1.png"
+import talents2 from "@/assets/talents2.png"
+import talents3 from "@/assets/talents3.png"
 
 export const jobs = [
     "Shopify Developer",
@@ -73,5 +76,26 @@ export const recuirementProcess = [
     "Technical Evaluation",
     "Application Review",
     "Lets get to work"
+]
 
+export const journeyProcess = [
+    {
+        title: "Find your next star performer.",
+        body: "Explore the vast Zwilt marketplace to find the candidate that meets your needs.",
+        image: talents1,
+        bgColor: "bg-color-7"
+    },
+    {
+        title: "Evaluate to your heart’s content.",
+        body: "Assess the candidate through work history, transparent tests and video interviews.",
+        btnText: "Browse More",
+        bgColor: "bg-color-16",
+        image: talents2,
+    },
+    {
+        title: "Start building your team.",
+        body: "Onboard your candidate right away and start creating the next big thing.",
+        bgColor: "bg-color-17",
+        image: talents3,
+    }
 ]

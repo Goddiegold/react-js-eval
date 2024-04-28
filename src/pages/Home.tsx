@@ -1,3 +1,4 @@
+import SectionFive from "@/components/home/SectionFive";
 import SectionFour from "@/components/home/SectionFour";
 import SectionOne from "@/components/home/SectionOne";
 import SectionThree from "@/components/home/SectionThree";
@@ -21,6 +22,9 @@ const Home = () => {
 
             {/* section four */}
             <SectionFour />
+
+            {/* section five */}
+            <SectionFive />
         </Flex>
     )
 }
