@@ -169,7 +169,7 @@ const SectionTwo = () => {
                             </Flex>
 
 
-                            <Flex align={'flex-end'} className="w-[60%]" >
+                            <Flex align={'flex-end'} className="w-[60%] cursor-pointer" >
                                 <Text className="">
                                     <span className="font-semibold">30 more</span> to epxlore</Text>
                             </Flex>
