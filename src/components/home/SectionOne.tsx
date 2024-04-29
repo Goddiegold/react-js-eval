@@ -1,6 +1,6 @@
 import {
     ActionIcon, Flex, Text,
-    TextInput, 
+    TextInput,
     Image,
     SegmentedControl,
     Grid
@@ -8,31 +8,37 @@ import {
 import { Header } from "../header";
 import vector1 from "@/assets/vector1.png";
 import { jobs } from "@/shared/helpers";
+import profilex from "@/assets/profilex.png";
+import { useViewportSize } from "@mantine/hooks";
 
 const SectionOne = () => {
+    const { height, width } = useViewportSize();
     return (
         <>
-            <Flex direction={'column'} mih={500} className="" p={40} bg={'gray'}>
+            <Flex direction={'column'} mih={500} className="" p={width < 500 ? 15 : 40} bg={'gray'}>
                 <Header />
 
                 <Flex className="w-full" mt={80} direction={'column'} justify={'space-between'}>
-                    <Text
-                        my={15}
-                        fw={600} size="2.5rem"
-                        className=" text-color-2 leading-[50px]
-                         mx-auto w-[80%] md:w-[40%] text-center">
-                        Finding the right fit has never been easier.</Text>
+                    <Text className="block w-[90%] md:w-[70%] lg:w-[40%] mx-auto sm:leading-[50px] leading-[40px]"
+                        fw={600}
+                        c={"dark"}
+                        size="2.5rem"> Finding the right fit
+                        <div className="w-[3rem] h-[3rem] mx-[4px] inline-block">
+                            <Image src={profilex} className="w-full" mt={15} />
+                        </div> has never been easier.</Text>
 
                     <Text
-                        my={15}
-                        className=" text-color-2 text-[19px] mx-auto w-[80%] md:w-[40%] text-center"
+                        my={30}
+                        className=" text-color-2 text-[19px]
+                         mx-auto w-[90%] md:w-[70%] lg:w-[40%] text-center"
                     >With our rigorous pre-vetting proces, you'll never have to worry about finding the ideal candidate ever again.</Text>
 
-                    <Flex className="w-[70%] md:w-[400px] mx-auto" my={15}>
+                    <Flex className="w-[90%] md:w-[400px] mx-auto" my={15}>
                         <TextInput
                             placeholder="design |"
                             // rightSectionWidth={50}
-                            size="lg" className="w-full" radius={10}
+                            size="lg"
+                            className="w-full" radius={10}
                             rightSection={<ActionIcon
                                 h={"97%"}
                                 className="bg-color-3 hover:bg-color-3 w-full"
@@ -49,6 +55,7 @@ const SectionOne = () => {
                         direction={'column'}
                         className="bg-color-5 rounded-[10px] w-[90%] md:w-[60%] mx-auto">
                         <SegmentedControl
+                            orientation={width < 500 ? "vertical" : "horizontal"}
                             my={10}
                             className="mx-auto"
                             radius={10}

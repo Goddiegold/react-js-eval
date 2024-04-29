@@ -8,6 +8,7 @@ import { jobsList } from "@/shared/helpers";
 import { MedalMilitary, SquaresFour, User } from "@phosphor-icons/react";
 import vector1 from "@/assets/vector1.png";
 import vector2 from "@/assets/vector2.png";
+import { useViewportSize } from "@mantine/hooks";
 
 interface ListCardProps {
     data: [],
@@ -75,6 +76,7 @@ const ListCard: React.FC<ListCardProps> = ({
 }
 
 const SectionTwo = () => {
+    const { height, width } = useViewportSize();
     return (
         <>
             <Flex
@@ -82,12 +84,12 @@ const SectionTwo = () => {
                 direction={"column"}
                 mt={100}
                 className="bg-color-7 -skew-y-[3deg] overflow:hidden"
-                mih={600} p={20}>
-                <Flex className="skew-y-[3deg]" direction={'column'} mt={100} px={40}>
+                mih={600} p={width > 500 ? 20 : 10}>
+                <Flex className="skew-y-[3deg]" direction={'column'} mt={100} px={width > 500 ? 40 : 10}>
                     <Text
                         fw={600}
                         size="2.5rem"
-                        className="w-[70%]
+                        className="lg:w-[70%] w-full
                         leading-[50px]
                         text-color-2
                      mx-auto text-center"
@@ -97,9 +99,9 @@ const SectionTwo = () => {
                     <Flex direction={'column'} my={70}>
                         <Flex className="flex flex-row justify-between !w-full">
 
-                            <Flex className="w-[40%]" direction={'column'} justify={'center'}>
+                            <Flex className="w-full lg:w-[40%]" direction={'column'} justify={'center'}>
                                 <Text
-                                    className="w-[80%]"
+                                    className="lg:w-[80%] w-full"
                                     mb={30}
                                     fw={500}
                                     size="1.5rem"
@@ -123,7 +125,7 @@ const SectionTwo = () => {
                                 </div>
 
                                 <Text
-                                    className="w-[80%]"
+                                    className="lg:w-[80%] w-full"
                                     my={30}
                                     fw={500}
                                     size="1.5rem"
@@ -148,7 +150,7 @@ const SectionTwo = () => {
                             </Flex>
 
 
-                            <Flex className="w-[60%]" direction={'column'} align={'flex-end'}>
+                            <Flex className="w-[60%] hidden lg:flex" direction={'column'} align={'flex-end'}>
                                 <ListCard
                                     title="IT & Developement"
                                     data={jobsList.slice(0, 5)} />
@@ -160,8 +162,8 @@ const SectionTwo = () => {
 
                         </Flex>
 
-                        <Flex className="flex-row justify-between w-full items-center" >
-                            <Flex className="w-[51%] items-center">
+                        <Flex className="flex-row justify-between w-full items-center">
+                            <Flex className="w-[51%] items-center hidden lg:flex">
                                 <ActionIcon h={60} w={60} radius={'30%'} color="dark">
                                     <Image src={vector2} className="w-[40%]" />
                                 </ActionIcon>
@@ -169,7 +171,7 @@ const SectionTwo = () => {
                             </Flex>
 
 
-                            <Flex align={'flex-end'} className="w-[60%] cursor-pointer" >
+                            <Flex align={'flex-end'} className="w-[60%] cursor-pointer mt-[30px] lg:mt-0" >
                                 <Text className="">
                                     <span className="font-semibold">30 more</span> to epxlore</Text>
                             </Flex>

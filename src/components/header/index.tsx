@@ -87,7 +87,7 @@ export function Header() {
             className='rounded-[15px]'>
             <header className={classes.header}>
                 <Group justify="space-between" h="100%">
-                    <Image src={logo} width={100}/>
+                    <Image src={logo} width={100} />
 
                     <Group h="100%" gap={0} visibleFrom="sm">
                         <a href="#" className={classes.link}>
@@ -116,7 +116,10 @@ export function Header() {
                         </Button>
                     </Group>
 
-                    <Burger opened={drawerOpened} onClick={toggleDrawer} hiddenFrom="sm" />
+                    <Burger
+                        color='white'
+                        opened={drawerOpened}
+                        onClick={toggleDrawer} hiddenFrom="sm" />
                 </Group>
             </header>
 
@@ -125,42 +128,36 @@ export function Header() {
                 onClose={closeDrawer}
                 size="100%"
                 padding="md"
-                title="Navigation"
+                title={<Text fw={700} size='lg'>Ziwit</Text>}
                 hiddenFrom="sm"
                 zIndex={1000000}
             >
                 <ScrollArea h={`calc(100vh - ${rem(80)})`} mx="-md">
                     <Divider my="sm" />
 
-                    <a href="#" className={classes.link}>
-                        Home
+                    <a href="#" className={`${classes.link} mb-[20px] text-black`}>
+                        Find Work
                     </a>
-                    <UnstyledButton className={classes.link} onClick={toggleLinks}>
-                        <Center inline>
-                            <Box component="span" mr={5}>
-                                Features
-                            </Box>
-                            {/* <IconChevronDown
-                                style={{ width: rem(16), height: rem(16) }}
-                                color={theme.colors.blue[6]}
-                            /> */}
-                            <HouseLine style={{ width: rem(16), height: rem(16) }}
-                                color={theme.colors.blue[6]} />
-                        </Center>
-                    </UnstyledButton>
-                    <Collapse in={linksOpened}>{links}</Collapse>
-                    <a href="#" className={classes.link}>
-                        Learn
+
+                    {/* <Collapse in={linksOpened}>{links}</Collapse> */}
+                    <a href="#" className={`${classes.link} mb-[20px] text-black`}>
+                        Find Talent
                     </a>
-                    <a href="#" className={classes.link}>
-                        Academy
+                    <a href="#" className={`${classes.link} mb-[20px] text-black`}>
+                        Articles
+                    </a>
+                    <a href="#" className={`${classes.link} mb-[20px] text-black`}>
+                        Contact Us
                     </a>
 
                     <Divider my="sm" />
 
                     <Group justify="center" grow pb="xl" px="md">
-                        <Button variant="default">Log in</Button>
-                        <Button className='text-color-1 bg-white'>Sign up</Button>
+                        <Button  color='dark' radius={13}>Log in</Button>
+                        <Button
+                            className='bg-color-1 hover:bg-color-1' radius={13}>
+                            Join Now
+                        </Button>
                     </Group>
                 </ScrollArea>
             </Drawer>
