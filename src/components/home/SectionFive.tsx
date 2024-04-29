@@ -2,6 +2,7 @@ import { ActionIcon, Flex, Image, Text } from "@mantine/core";
 import vector2 from "@/assets/vector2.png";
 import React from "react";
 import { journeyProcess } from "@/shared/helpers";
+import { useViewportSize } from "@mantine/hooks";
 
 interface CategoryProps {
     title: string,
@@ -26,14 +27,14 @@ const Category: React.FC<CategoryProps> = ({ title,
     return (
         <Flex
             mb={15}
-            mih={200}
+            mih={400}
             className={`-skew-y-[3deg] overflow-hidden ${bgColor}`}>
             <Flex
                 className="flex-row w-full skew-y-[3deg] 
                 justify-between"
                 px={35}>
 
-                <Flex className="w-[50%]" mt={100}>
+                <Flex className="lg:w-[50%] lg:mt-[100px] my-[20px] mb-0">
 
                     <Flex direction={'row'} >
 
@@ -61,7 +62,7 @@ const Category: React.FC<CategoryProps> = ({ title,
 
                 </Flex>
 
-                <Flex className="w-[50%] flex-col" align={'flex-end'}>
+                <Flex className="w-[50%] flex-col hidden lg:flex" align={'flex-end'}>
                     <div className="-mt-[30px]">
                         <Image src={image} className="" />
                     </div>
@@ -72,16 +73,17 @@ const Category: React.FC<CategoryProps> = ({ title,
 }
 
 const SectionFive = () => {
+    const { height, width } = useViewportSize();
     return (
         <Flex
             maw={"100%"}
             direction={"column"}
-            mih={500} p={20} mt={35}
+            mih={500} p={width > 500 ? 20 : 10} mt={35} 
         >
 
             <Flex
                 direction={'column'}
-                mt={70} className="w-full justify-between" px={40}>
+                mt={70} className="w-full justify-between" px={width > 500 ? 40 : 10}>
                 <Text
                     className="text-center"
                     fw={600}

@@ -1,6 +1,6 @@
 import { recuirementProcess } from "@/shared/helpers";
 import { Collapse, Flex, Paper, Text, Image } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { useDisclosure, useViewportSize } from "@mantine/hooks";
 import { Video } from "@phosphor-icons/react";
 import React from "react";
 import quizImg from "@/assets/quiz.png";
@@ -51,6 +51,7 @@ const ListCard: React.FC<ListCardProps> = ({ step, stepName }) => {
 }
 
 const SectionFour = () => {
+    const { height, width } = useViewportSize();
     return (
         <>
             <Flex
@@ -58,12 +59,12 @@ const SectionFour = () => {
                 direction={"column"}
                 // mt={100}
                 className="bg-white overflow:hidden"
-                mih={500} p={20} mt={35}>
-                <Flex mt={70} className="w-full justify-between" px={40}>
+                mih={500} p={width > 500 ? 20 : 10} mt={35}>
+                <Flex mt={70} className="w-full justify-between" px={width > 500 ? 40 : 10}>
 
 
-                    <Flex direction={'column'} className="w-[50%]">
-                        <div className="w-[80%]">
+                    <Flex direction={'column'} className="w-full lg:w-[50%]">
+                        <div className="lg:w-[80%]">
                             <Text
                                 mb={30}
                                 className="leading-[45px]"
@@ -85,7 +86,7 @@ const SectionFour = () => {
 
                     <Flex
                         mt={140}
-                        className="w-[50%]"
+                        className="w-[50%] hidden lg:flex"
                         direction={'column'}>
                         <div className="w-full h-[70px]">
                             <Image src={quizImg} className="w-[75%]" />

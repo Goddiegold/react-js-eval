@@ -111,7 +111,7 @@ export function Header() {
                         {/* <Button variant='transparent' color='white'>Log in</Button>
                         <Button>Sign up</Button> */}
                         <Button variant="transparent" color='white'>Log in</Button>
-                        <Button className='text-color-1 bg-white' radius={13}>
+                        <Button className='text-color-1 bg-white hover:bg-white' radius={13}>
                             Join Now
                         </Button>
                     </Group>

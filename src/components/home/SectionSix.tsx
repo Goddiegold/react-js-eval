@@ -4,6 +4,7 @@ import vector2 from "@/assets/vector2.png";
 import { Carousel, Embla } from "@mantine/carousel";
 import { useCallback, useEffect, useState } from "react";
 import { productReasons } from "@/shared/helpers";
+import { useViewportSize } from "@mantine/hooks";
 
 
 interface CategoryProps {
@@ -22,13 +23,13 @@ const Category: React.FC<CategoryProps> = ({ title, labels, image }) => {
             <Flex className="w-full flex-row justify-around">
                 <Flex direction={'column'}
                     justify={'center'}
-                    className="w-[50%]">
+                    className="lg:w-[50%]">
                     <Text fw={700} size="2.5rem" className="w-[70%] leading-[50px]">
                         {title}</Text>
                     <Flex direction={'column'} my={30}>
                         {labels.map(item => (
-                            <Flex align={'center'}>
-                                <div className="bg-color-1 w-[20px] h-[8px] rounded"></div>
+                            <Flex className="items-center" my={10}>
+                                <div className="bg-color-1 lg:w-[20px] w-[10px] h-[8px] rounded"></div>
                                 <Text ml={10}>{item}</Text>
                             </Flex>
                         ))}
@@ -42,7 +43,7 @@ const Category: React.FC<CategoryProps> = ({ title, labels, image }) => {
                     </Flex>
                 </Flex>
 
-                <Flex className="h-[450px] w-[50%]" mt={10}>
+                <Flex className="h-[450px] w-[50%] hidden lg:flex" mt={10}>
                     <Image src={image} className="w-full" />
                 </Flex>
             </Flex>
@@ -66,6 +67,7 @@ const SectionSix = () => {
             handleScroll();
         }
     }, [embla]);
+    const { height, width } = useViewportSize();
     // bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%
     return (
         <Flex
@@ -75,18 +77,19 @@ const SectionSix = () => {
             maw={"100%"}
             className="bg-gradient-to-b from-gray-200 to-gray-500 -skew-y-[3deg] overflow:hidden"
             direction={"column"}
-            mih={950} p={20} mt={35}>
-            <Flex className="skew-y-[3deg]" direction={'column'} mt={100}>
+            mih={950} p={width > 500 ? 20 : 10} mt={35}>
+            <Flex className="skew-y-[3deg] lg:mt-[100px]" direction={'column'} >
 
                 <Text fw={600} size="2.5rem"
                     className="text-center mx-auto" my={10}>Why choose Zwilt?</Text>
                 <Text
                     my={10}
-                    className="text-center w-[40%] mx-auto"
+                    className="text-center lg:w-[40%] mx-auto"
                 >We take complex hiring processes - and simplify them.
                     Connecting you to the world’s highly qualified talent pool.</Text>
 
                 <Carousel
+                    w={"100%"}
                     withControls={false}
                     getEmblaApi={setEmbla}
                     withIndicators={false}
@@ -108,9 +111,9 @@ const SectionSix = () => {
                     className="mx-auto"
                     color="dark"
                     value={scrollProgress}
-                    w={320}
-                    size="sm"
-                    mt={"xl"}
+                    miw={300}
+                    size={width > 500 ? "xs" : "sm"}
+                    my={30}
                 />
             </Flex>
         </Flex>

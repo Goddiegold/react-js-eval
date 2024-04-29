@@ -4,22 +4,25 @@ import grooveImg from "@/assets/groovehq.png";
 import grooveImg2 from "@/assets/groovehq2.png";
 import vector3 from "@/assets/vector3.png";
 import doubleQuotation from "@/assets/doublequotation.svg";
+import { useViewportSize } from "@mantine/hooks";
 
 const SectionThree = () => {
+    const { height, width } = useViewportSize();
     return (
         <Flex
             maw={"100%"}
             direction={"column"}
             // mt={100}
             className="bg-color-2  -skew-y-[3deg] overflow:hidden"
-            mih={700} p={20}>
+            mih={700} p={width > 500 ? 20 : 10}>
             <Flex direction={'column'}>
-                <Flex justify={'flex-end'} mt={-20}>
+                <Flex justify={'flex-end'} className="lg:-mt-[20px] -mt-[10px]">
                     <Image src={doubleQuotation} width={100} />
                 </Flex>
-                <Flex className="skew-y-[3deg] flex-row justify-between w-full" mt={50} px={40}>
-                    <Flex direction={'column'} className="w-[50%]" mt={0}>
-                        <Flex className="w-[50%] flex-col overflow-hidden">
+                <Flex className="skew-y-[3deg] flex-row justify-between w-full" mt={50} px={width > 500 ? 40 : 10}>
+                    <Flex direction={'column'} className="w-full lg:w-[50%]" mt={0}>
+
+                        <Flex className="w-full lg:w-[50%] flex-col overflow-hidden">
                             <Text className="block"
                                 fw={600}
                                 c={"white"}
@@ -38,8 +41,8 @@ const SectionThree = () => {
                             className="w-[80%] md:w-[60%]">Zwilt enabled us to deliver on time and
                             they’ve been heavy hitters in our corner since.</Text>
 
-                        <Flex className="justify-between w-[22%]">
-                            <ActionIcon h={60} w={60} radius={'40%'} color="white">
+                        <Flex className="">
+                            <ActionIcon h={60} w={60} radius={'40%'} color="white" mr={5}>
                                 <Image src={vector3} className="w-[40%] rotate-180" />
                             </ActionIcon>
                             <ActionIcon h={60} w={60} radius={'40%'} color="white">
@@ -48,8 +51,8 @@ const SectionThree = () => {
                         </Flex>
                     </Flex>
 
-                    <Flex className="w-[50%]"
-                    justify={'flex-end'}
+                    <Flex className="w-[50%] lg:flex hidden"
+                        justify={'flex-end'}
                         direction={'column'} mt={0}>
                         <Flex>
                             <div className="flex w-[70px] h-[70px]

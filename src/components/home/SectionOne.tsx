@@ -15,7 +15,7 @@ const SectionOne = () => {
     const { height, width } = useViewportSize();
     return (
         <>
-            <Flex direction={'column'} mih={500} className="" p={width < 500 ? 15 : 40} bg={'gray'}>
+            <Flex direction={'column'} mih={500} className="" p={width < 500 ? 10 : 40} bg={'gray'}>
                 <Header />
 
                 <Flex className="w-full" mt={80} direction={'column'} justify={'space-between'}>

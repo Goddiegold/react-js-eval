@@ -1,4 +1,5 @@
 import { Accordion, Flex, SegmentedControl, Text } from "@mantine/core";
+import { useViewportSize } from "@mantine/hooks";
 
 
 const questions = [
@@ -9,6 +10,7 @@ const questions = [
 ]
 
 const Faq = () => {
+    const { height, width } = useViewportSize();
     return (
         <Flex
             miw={"100%"}
@@ -27,7 +29,8 @@ const Faq = () => {
                     classNames={{
                         indicator: "bg-color-10",
                     }}
-                    className="w-[500px]"
+                    orientation={width > 500 ? "horizontal" : "vertical"}
+                    className="lg:w-[500px] w-full"
                     mx={'auto'}
                     data={['General', 'Joining Process']} />
 
