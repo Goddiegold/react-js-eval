@@ -1,6 +1,7 @@
 import SectionFive from "@/components/home/SectionFive";
 import SectionFour from "@/components/home/SectionFour";
 import SectionOne from "@/components/home/SectionOne";
+import SectionSix from "@/components/home/SectionSix";
 import SectionThree from "@/components/home/SectionThree";
 import SectionTwo from "@/components/home/SectionTwo";
 import { Flex } from "@mantine/core";
@@ -25,6 +26,10 @@ const Home = () => {
 
             {/* section five */}
             <SectionFive />
+
+            {/* section six */}
+            <SectionSix />
+
         </Flex>
     )
 }

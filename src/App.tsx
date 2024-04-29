@@ -1,9 +1,7 @@
 import { MantineProvider } from '@mantine/core'
-// import { Notifications } from '@mantine/notifications';
-// import "@mantine/notifications/styles.css";
-import { RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
 import '@mantine/core/styles.css';
+import '@mantine/carousel/styles.css';
 
 const App = () => {
   return (
@@ -12,8 +10,6 @@ const App = () => {
       withGlobalClasses
       withStaticClasses
     >
-      {/* <Notifications position="top-right" zIndex={2077} /> */}
-      {/* <RouterProvider router={router} /> */}
       <Home />
     </MantineProvider>
   );
