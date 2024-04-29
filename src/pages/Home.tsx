@@ -1,4 +1,5 @@
 import Faq from "@/components/home/Faq";
+import Footer from "@/components/home/Footer";
 import SectionFive from "@/components/home/SectionFive";
 import SectionFour from "@/components/home/SectionFour";
 import SectionOne from "@/components/home/SectionOne";
@@ -33,6 +34,9 @@ const Home = () => {
 
             {/* faq section */}
             <Faq/>
+
+            {/* footer */}
+            <Footer/>
 
         </Flex>
     )

@@ -128,3 +128,32 @@ export const productReasons = [
         image: category3Img,
     }
 ]
+
+
+export const moreLinks = [
+    {
+        title: "Platform",
+        links: ["Find Work",
+            "Find Talent",
+            "Articles",
+            "About Us"
+        ]
+    },
+    {
+        title: "Categories",
+        links: ["Data Science",
+            "IT & Networking",
+            "Web & Mobile",
+        ]
+    },
+    {
+        title: "Help",
+        links: ["Contact Us",
+        ]
+    },
+    {
+        title: "Get in touch",
+        links: ["Instagram", "Linkdeln", "Twitter"
+        ]
+    }
+]
