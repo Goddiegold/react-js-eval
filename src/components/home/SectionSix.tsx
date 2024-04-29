@@ -75,7 +75,7 @@ const SectionSix = () => {
             maw={"100%"}
             className="bg-gradient-to-b from-gray-200 to-gray-500 -skew-y-[3deg] overflow:hidden"
             direction={"column"}
-            mih={500} p={20} mt={35}>
+            mih={950} p={20} mt={35}>
             <Flex className="skew-y-[3deg]" direction={'column'} mt={100}>
 
                 <Text fw={600} size="2.5rem"

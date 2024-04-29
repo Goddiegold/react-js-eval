@@ -22,7 +22,7 @@ export default {
         "color-14": "#8BA4FD",
         "color-15": "#D1C4E2",
         "color-16": "#FFF7E1",
-        "color-17": "#F3F3F3",
+        "color-17": "#F3F3F3" 
       },
       fontFamily: {
         primary: "Roboto",
