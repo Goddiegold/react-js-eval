@@ -128,7 +128,7 @@ export function Header() {
                 onClose={closeDrawer}
                 size="100%"
                 padding="md"
-                title={<Text fw={700} size='lg'>Ziwit</Text>}
+                title={<Text fw={700} size='lg'>Zwilt</Text>}
                 hiddenFrom="sm"
                 zIndex={1000000}
             >
